@@ -15,15 +15,18 @@ if (path.includes('index.html') || path === '/' || path.endsWith('/')) {
 
       albums.forEach(album => {
         const div = document.createElement('div');
-        div.className = 'col-md-4 mb-4';
+        div.className = 'col-md-4';
         div.innerHTML = `
-          <div class="card h-100">
-            <img src="${album.cover_url}" class="card-img-top" alt="${album.title}">
-            <div class="card-body">
-              <h5 class="card-title">${album.title} - ${album.artist}</h5>
-              <p class="card-text">$${album.price}</p>
-              <a href="edit.html?id=${album.id}" class="btn btn-warning me-2">Edit</a>
-              <button class="btn btn-danger" onclick="deleteAlbum(${album.id})">Delete</button>
+          <div class="card h-100 shadow-sm">
+            <img src="${album.cover_url}" class="card-img-top" alt="${album.title}" style="height: 250px; object-fit: cover;">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">${album.title}</h5>
+              <p class="card-text text-muted">${album.artist}</p>
+              <p class="card-text fw-bold">$${album.price}</p>
+              <div class="mt-auto">
+                <a href="edit.html?id=${album.id}" class="btn btn-primary btn-sm me-2">Edit</a>
+                <button onclick="deleteAlbum(${album.id})" class="btn btn-danger btn-sm">Delete</button>
+              </div>
             </div>
           </div>
         `;

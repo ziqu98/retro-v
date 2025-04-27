@@ -7,7 +7,7 @@ This is a simple CRUD backend for vinyl shop e-commerce with AWS S3 and RDS impl
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/ziqu98/retro-v-backend.git
+   git clone https://github.com/ziqu98/retro-v.git
    ```
 
 2. **Install Node Modules:**
